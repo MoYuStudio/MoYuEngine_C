@@ -32,7 +32,7 @@ void event(SDL_Surface* screen, SDL_Window* win){
 
 int main(){
 
-    SDL_Window* win = SDL_CreateWindow("SUGT12",
+    SDL_Window* win = SDL_CreateWindow("MoYu Engine C",
                                         SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,
                                         width, height,
                                         SDL_WINDOW_SHOWN);
