@@ -15,14 +15,16 @@ int x = 0;
 SDL_Window* window = NULL;
 SDL_Surface* surface = NULL;
 
-void init(){
+void init() {
 
-    if (SDL_Init(SDL_INIT_VIDEO) < 0){
-        exit(-1);}
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+        exit(-1);
+    }
 
-    return 0;}
+    return 0;
+}
 
-void blit(SDL_Surface* surface, SDL_Window* window){
+void blit(SDL_Surface* surface, SDL_Window* window) {
 
     if (x <= 0) {
         fps = fps_o;
@@ -40,7 +42,8 @@ void blit(SDL_Surface* surface, SDL_Window* window){
     struct SDL_Rect redRect = { x, 0, 100, 100 };
     SDL_FillRect(surface, &redRect, 0xffff0000);
 
-    SDL_UpdateWindowSurface(window);}
+    SDL_UpdateWindowSurface(window);
+}
 
 void event(SDL_Surface* surface, SDL_Window* window) {
 
@@ -71,7 +74,7 @@ void event(SDL_Surface* surface, SDL_Window* window) {
     }
 }
 
-int main(){
+int main() {
 
     init();
 
@@ -88,4 +91,5 @@ int main(){
 
     SDL_DestroyWindow(window);
 
-    return 0;}
+    return 0;
+}
