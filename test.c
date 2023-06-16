@@ -3,15 +3,21 @@
 
 float GenerateNoise(int x, int y, int seed)
 {
+    int freq = 2;
+
     int n = x + y * 57 + seed * 131;
     n = (n << 13) ^ n;
     float noise = (1.0f - ((n * (n * n * 15731 + 789221) + 1376312589) & 0x7FFFFFFF) / 1073741824.0f);
 
+    // 调整噪声频率
+    float adjustedNoise = noise * freq;
+
     // 将噪声值缩放到[0, 1000]范围并减缓过度
-    int scaledNoise = (int)(noise * 1000+1000);
+    int scaledNoise = (int)(adjustedNoise * 1000 + 1000);
 
     return scaledNoise;
 }
+
 
 
 int main(void)
