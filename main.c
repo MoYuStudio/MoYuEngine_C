@@ -47,10 +47,9 @@ int main(void)
 
                 DrawTextureEx(texture, position, 0.0f, 1.0f, WHITE);
 
-                DrawText("MoYuEngine Testing Ver", 0.0f+15, 1.0f+25, 2, LIGHTGRAY);
-
             EndMode2D();
 
+            DrawText("MoYuEngine Testing Ver", 550, 10, 20, LIGHTGRAY);
             DrawFPS(10, 10);
 
         EndDrawing();
