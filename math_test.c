@@ -18,8 +18,6 @@ float GenerateNoise(int x, int y, int seed)
     return scaledNoise;
 }
 
-
-
 int main(void)
 {
     const int mapSize = 9;
